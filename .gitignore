@@ -1,0 +1,46 @@
+# ──────────────────────────────────────────────────────────────
+# Rust / Cargo
+# ──────────────────────────────────────────────────────────────
+
+# Build output. Cargo writes all compiled binaries, intermediate object
+# files, incremental compilation caches, and dependency builds here.
+# It's huge, machine-specific, and fully reproducible from source — never commit it.
+target/
+
+# Cargo.lock: KEEP committed for binaries/applications (this repo) so builds
+# are reproducible. IGNORE it only for libraries published to crates.io,
+# so downstream users resolve their own dependency versions.
+# (Not ignored here — these are binary crates.)
+
+# Backup files Cargo or rustfmt may leave behind
+**/*.rs.bk
+
+# Perf profiling output (cargo flamegraph, etc.)
+*.perf
+perf.data*
+flamegraph.svg
+
+# ──────────────────────────────────────────────────────────────
+# Editor / IDE
+# ──────────────────────────────────────────────────────────────
+
+# rust-analyzer / IntelliJ scratch state
+.idea/
+*.iml
+
+# VS Code: usually personal — uncomment to ignore. Some teams commit
+# .vscode/settings.json with shared formatter/lint settings.
+# .vscode/
+
+# ──────────────────────────────────────────────────────────────
+# OS junk
+# ──────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ──────────────────────────────────────────────────────────────
+# Secrets / local env
+# ──────────────────────────────────────────────────────────────
+.env
+.env.local
+*.pem
